@@ -21,7 +21,7 @@ const Signin = () => {
                 />
               </div>
               <div className="col-12 mb-3">
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   name="pass"

@@ -36,7 +36,7 @@ const Signup = () => {
     });
   };
 
-  //to show error message
+  // to show error message
   const showError = () => (
     <div
       className="alert alert-danger"
@@ -46,12 +46,12 @@ const Signup = () => {
     </div>
   );
   //to show success message
-  const showError = () => (
+  const showSuccess = () => (
     <div
       className="alert alert-info"
       style={{ display: success ? "" : "none" }}
     >
-      Your account has been created.
+      Your account has been created. Verify before login
     </div>
   );
   return (
@@ -64,7 +64,7 @@ const Signup = () => {
               {showError()}
               {showSuccess()}
               <div className="col-12 mb-3">
-                <label for="firstname">FirstName</label>
+                <label htmlFor="firstname">FirstName</label>
                 <input
                   type="text"
                   name="fname"
@@ -75,20 +75,9 @@ const Signup = () => {
                   value={name}
                 />
               </div>
-              {/* <div className="col-12 mb-3">
-                <label for="lastname">LastName</label>
-                <input
-                  type="text"
-                  name="lname"
-                  id="lastname"
-                  placeholder="LastName"
-                  className="form-control"
-                  onChange={handleChange("name")}
-                  value={name}
-                />
-              </div> */}
+             
               <div className="col-12 mb-3">
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -100,7 +89,7 @@ const Signup = () => {
                 />
               </div>
               <div className="col-12 mb-3">
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   name="pass"
@@ -109,16 +98,6 @@ const Signup = () => {
                   className="form-control"
                   onChange={handleChange("password")}
                   value={password}
-                />
-              </div>
-              <div className="col-12 mb-3">
-                <label for="cpassword">Confirm Password</label>
-                <input
-                  type="password"
-                  name="cpass"
-                  id="cpassword"
-                  placeholder="***********"
-                  className="form-control"
                 />
               </div>
               <div className="col-6">
